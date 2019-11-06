@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Catalog</string>
+    <string name="error_message_network">Network error.Please check your Internet connection</string>
+    <string name="text_product_name">Product Name</string>
+    <string name="text_product_price">Product Price</string>
 </resources>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="android.view.View" />
+        <import type="android.text.TextUtils"/>
+
+        <variable
+            name="product"
+            type="com.app.catalog.domain.entities.Products"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        style="@style/MatchWidthVertical">
+
+        <ImageView
+            android:id="@+id/product_iv"
+            style="@style/ImageViewMatchWidth"
+            app:productImage="@{product.productImageUrl}"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:contentDescription="@string/app_name"/>
+
+        <TextView
+            android:id="@+id/product_tv"
+            style="@style/TextViewMatchWidth"
+            android:visibility="@{TextUtils.isEmpty(product.productName) ? View.GONE : View.VISIBLE}"
+            android:text="@{product.productName}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/product_iv"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
