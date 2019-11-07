@@ -37,19 +37,19 @@ To run the test you must connect to real device or an emulator then you can choo
 
 1. To run all Unit test, open the Project window, and then right-click a test and click Run.
 
-![Automated tests](screenshots/select_unit_test.png)
+![Automated tests](screenshots/select_unit_test.jpg)
 
 **Then Click**
 
-![Automated tests](screenshots/run_unit_test.png)
+![Automated tests](screenshots/run_unit_test.jpg)
 
 2. To run all android test in a directory, right-click on the directory and select Run tests
 
-![Automated tests](screenshots/select_android_test.png)
+![Automated tests](screenshots/select_android_test.jpg)
 
 **Then Click**
 
-![Automated tests](screenshots/run_android_test.png)
+![Automated tests](screenshots/run_android_test.jpg)
 
 ## Running and Building the application
 
