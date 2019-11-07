@@ -15,6 +15,7 @@ dynamically from a web server.
 * __[Android Material Design](https://material.io/components/)__
 * __[Android Architecture Components](https://developer.android.com/topic/libraries/architecture/index.html)__
 * __[Instrumented Unit Testing](https://developer.android.com/training/testing/unit-testing/instrumented-unit-tests)__
+* __[Espresso Testing](http://developer.android.com/training/testing/espresso)__
 
 Above Features are used to make code simple, generic, understandable, clean and easily maintainable
 for future development. Especially **Koin** for dependency injection and **Kotlin Coroutines** for
@@ -29,6 +30,34 @@ In the result of that, we can reduce the APK size along with we can also provide
 to our code from decompiling or extracting of the code from APK. For more info refer the Image below.
 
 ![Apk Analyser](screenshots/Catalog_Apk_Analyser.png)
+
+## Automated tests
+
+To run the test you must connect to real device or an emulator then you can choose in one of the following ways:
+
+1. To run all Unit test, open the Project window, and then right-click a test and click Run.
+
+![Automated tests](screenshots/select_unit_test.png)
+
+**Then Click**
+
+![Automated tests](screenshots/run_unit_test.png)
+
+2. To run all android test in a directory, right-click on the directory and select Run tests
+
+![Automated tests](screenshots/select_android_test.png)
+
+**Then Click**
+
+![Automated tests](screenshots/run_android_test.png)
+
+## Running and Building the application
+
+You can run the app on a real device or an emulator.
+
+* __[Run on a real device](https://developer.android.com/training/basics/firstapp/running-app#RealDevice)__
+* __[Run on an emulator](https://developer.android.com/training/basics/firstapp/running-app#Emulator)__
+
 
 # Prerequisites
 * __Android Studio 3.5__
