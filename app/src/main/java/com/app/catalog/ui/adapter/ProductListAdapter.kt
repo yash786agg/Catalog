@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.app.catalog.commons.callBacks.DiffUtilCallBack
 import com.app.catalog.R
 import com.app.catalog.databinding.AdapterProductListBinding
-import com.app.catalog.commons.extensions.ProductItem
+import com.app.catalog.commons.communicator.ProductItem
 import com.app.catalog.domain.entities.Products
 import kotlin.properties.Delegates
 

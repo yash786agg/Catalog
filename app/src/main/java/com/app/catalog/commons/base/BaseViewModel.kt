@@ -11,7 +11,7 @@ abstract class BaseViewModel : ViewModel() {
      * This is a scope for all co-routines launched by [BaseViewModel]
      * that will be dispatched in a Pool of Thread
      */
-    protected val ioScope = CoroutineScope(Dispatchers.Default)
+    protected val ioScope = CoroutineScope(Dispatchers.IO)
 
     /**
      * Cancel all co-routines when the ViewModel is cleared

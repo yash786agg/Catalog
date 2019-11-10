@@ -10,7 +10,7 @@ import com.app.catalog.domain.entities.CategoryApiResponse
 import com.app.catalog.ui.fragment.ProductListFragment
 import com.app.catalog.vm.CategoryViewModel
 import com.app.catalog.commons.utils.UiHelper
-import com.app.catalog.commons.viewpager.ViewPagerAdapter
+import com.app.catalog.ui.viewpager.ViewPagerAdapter
 import com.google.android.material.tabs.TabLayout
 import kotlinx.android.synthetic.main.product_activity.*
 import org.koin.android.ext.android.inject

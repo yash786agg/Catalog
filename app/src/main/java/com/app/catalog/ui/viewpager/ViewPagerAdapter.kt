@@ -1,4 +1,4 @@
-package com.app.catalog.commons.viewpager
+package com.app.catalog.ui.viewpager
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager

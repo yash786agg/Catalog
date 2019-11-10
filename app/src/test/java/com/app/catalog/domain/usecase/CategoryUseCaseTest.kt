@@ -52,7 +52,7 @@ class CategoryUseCaseTest {
 
             categoryUseCase.execute()
 
-            verify(categoryRepository, times(2)).getCategory()
+            verify(categoryRepository, times(1)).getCategory()
         }
     }
 }

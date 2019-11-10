@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.app.catalog.R
 import com.app.catalog.domain.entities.Products
-import com.app.catalog.commons.extensions.ProductItem
+import com.app.catalog.commons.communicator.ProductItem
 import com.app.catalog.ui.activity.ProductDetailsActivity
 import com.app.catalog.ui.adapter.ProductListAdapter
 import com.app.catalog.vm.CategoryViewModel

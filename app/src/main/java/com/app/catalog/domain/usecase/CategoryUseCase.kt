@@ -16,21 +16,16 @@ class CategoryUseCase(private val categoryRepository: CategoryRepository) {
 
         var category : List<CategoryApiResponse> = listOf()
 
-        categoryRepository.getCategory().let { categoryEntity ->
+        val response = categoryRepository.getCategory()
 
-            val response = categoryRepository.getCategory()
+        if(response.isSuccessful) {
+            val items = response.body()
+            if(items?.size!! >= 0) category = items
 
-            if(response.isSuccessful) {
-                categoryEntity.body()?.let {
-
-                    val items = response.body()
-                    if(items?.size!! >= 0) category = items
-                }
-
-                networkState.postValue(NetworkState.Success())
-            }
-            else networkState.postValue(NetworkState.Error(response.code()))
+            networkState.postValue(NetworkState.Success())
         }
+        else networkState.postValue(NetworkState.Error(response.code()))
+
         return category
     }
 

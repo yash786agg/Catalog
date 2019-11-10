@@ -10,20 +10,33 @@
         <variable
             name="product"
             type="com.app.catalog.domain.entities.Products" />
+
+        <variable
+            name="callback"
+            type="com.app.catalog.ui.activity.ProductDetailsActivity"/>
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:orientation="vertical"
         style="@style/MatchWidthHeight">
 
+        <include
+            android:id="@+id/layout_appbar"
+            layout="@layout/appbar"
+            app:callback="@{callback}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <TextView
             android:id="@+id/text_product_name"
             style="@style/TextViewMatchWidth"
             android:visibility="@{TextUtils.isEmpty(product.productName) ? View.GONE : View.VISIBLE}"
             android:text="@{@string/text_product_name+` : `+product.productName}"
-            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="@dimen/dimen_20dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout_appbar"
             app:layout_constraintBottom_toTopOf="@+id/image_product" />
 
         <ImageView

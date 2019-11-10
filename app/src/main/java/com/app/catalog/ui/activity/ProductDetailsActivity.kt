@@ -13,7 +13,11 @@ class ProductDetailsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         val binding : ActivityProductDetailsBinding = DataBindingUtil.setContentView(this, R.layout.activity_product_details)
 
-        if(intent != null && intent.hasExtra(EXTRA_PRODUCT))
+        if(intent != null && intent.hasExtra(EXTRA_PRODUCT)) {
             binding.product = intent.getParcelableExtra(EXTRA_PRODUCT)
+            binding.callback = this
+        }
     }
+
+    fun moveToPreviousScreen() = finish()
 }
