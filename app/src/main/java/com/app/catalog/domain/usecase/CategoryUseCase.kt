@@ -22,7 +22,7 @@ class CategoryUseCase(private val categoryRepository: CategoryRepository) {
             val items = response.body()
             if(items?.size!! >= 0) category = items
 
-            networkState.postValue(NetworkState.Success())
+            networkState.postValue(NetworkState.Success(response.code()))
         }
         else networkState.postValue(NetworkState.Error(response.code()))
 

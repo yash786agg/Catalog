@@ -9,13 +9,9 @@ import kotlinx.coroutines.launch
 
 class CategoryViewModel(private val categoryUseCase : CategoryUseCase) : BaseViewModel() {
 
-    // FOR DATA ---
-    private val categoryLiveData : MutableLiveData<List<CategoryApiResponse>> = MutableLiveData()
-
     // OBSERVABLES ---
     var networkState : MutableLiveData<NetworkState<Int>> = MutableLiveData()
-    val category : MutableLiveData<List<CategoryApiResponse>>
-        get() = categoryLiveData
+    val category : MutableLiveData<List<CategoryApiResponse>> = MutableLiveData()
 
     // UTILS ---
     init {
@@ -28,5 +24,5 @@ class CategoryViewModel(private val categoryUseCase : CategoryUseCase) : BaseVie
     }
 
     private fun updateCategoryLiveData(result: List<CategoryApiResponse>)
-            = categoryLiveData.postValue(result)
+            = category.postValue(result)
 }

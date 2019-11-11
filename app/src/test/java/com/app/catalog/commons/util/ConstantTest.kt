@@ -15,5 +15,9 @@ class ConstantTest
         const val PRODUCT_AMOUNT : String = "2.01"
 
         const val PRODUCT_CURRENCY : String = "EUR"
+
+        const val EXPECTED_SUCCESS_RESPONSE_CODE : Int = 200
+
+        const val EXPECTED_ERROR_RESPONSE_CODE : Int = 404
     }
 }
